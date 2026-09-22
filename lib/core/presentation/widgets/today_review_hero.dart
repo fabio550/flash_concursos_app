@@ -25,7 +25,6 @@ class TodayReviewHero extends StatelessWidget {
           vertical: 12,
         ),
         child: Container(
-          width: MediaQuery.sizeOf(context).width,
           decoration: BoxDecoration(
             color: AppColors.accent,
             borderRadius: BorderRadius.circular(20),
