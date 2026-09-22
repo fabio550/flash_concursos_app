@@ -1,13 +1,18 @@
+import 'package:flash_concursos_app/core/presentation/widgets/app_tag.dart';
 import 'package:flash_concursos_app/core/system_design/app_buttons.dart';
+import 'package:flash_concursos_app/core/system_design/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class TodayReviewHero extends StatelessWidget {
   final int revisions;
   final int newCards;
+  final VoidCallback? onPressed;
+
 
   const TodayReviewHero({
     required this.revisions,
     required this.newCards,
+    required this.onPressed,
     super.key
   });
 
@@ -15,14 +20,14 @@ class TodayReviewHero extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Padding(
-        padding: EdgeInsetsGeometry.symmetric(
+        padding: EdgeInsets.symmetric(
           horizontal: 20,
           vertical: 12,
         ),
         child: Container(
           width: MediaQuery.sizeOf(context).width,
           decoration: BoxDecoration(
-            color: Color(0xFFd7f24c),
+            color: AppColors.accent,
             borderRadius: BorderRadius.circular(20),
           ),
           child: Column(
@@ -31,24 +36,9 @@ class TodayReviewHero extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Container(
-                    margin: EdgeInsets.all(22),
-                    padding: EdgeInsetsGeometry.symmetric(
-                      horizontal: 8,
-                      vertical: 4,
-                    ),
-                    decoration: BoxDecoration(
-                      color: Colors.black12,
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Text(
-                      'TJSP - Analista de Sistemas',
-                      style: TextStyle(
-                        fontSize: 14,
-                        color: Colors.black54,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
+                  Padding(
+                    padding: const EdgeInsets.all(22),
+                    child: AppTag(text: 'TJSP - Analista de Sistemas'),
                   ),
                   //-----------------------------------------------
                   Padding(
@@ -120,7 +110,7 @@ class TodayReviewHero extends StatelessWidget {
                 padding: EdgeInsetsGeometry.symmetric(horizontal: 26, vertical: 32),
                 child: ElevatedButton(
                   style: context.buttons.secondary,
-                  onPressed: () {},
+                  onPressed: onPressed,
                   child: const Text('Começar revisão'),
                 )
               )

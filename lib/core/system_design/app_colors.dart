@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 /// se uma cor nova aparecer num mockup, ela entra aqui primeiro.
 class AppColors {
   AppColors._();
+  
+  static const tagBackground = Colors.black12;
+  static const tagText = Colors.black54;
 
   static const background = Color(0xFF14150F);
   static const surface = Color(0xFF1C1C1F);
