@@ -1,11 +1,14 @@
 import 'package:flash_concursos_app/core/presentation/widgets/app_tag.dart';
+import 'package:flash_concursos_app/core/presentation/widgets/deck_summary.dart';
 import 'package:flash_concursos_app/core/system_design/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class DeckListTile extends StatelessWidget {
-  
+  final DeckSummary summary;
+
   const DeckListTile({
-    super.key
+    super.key,
+    required this.summary,
   });
 
   @override
@@ -19,7 +22,7 @@ class DeckListTile extends StatelessWidget {
           color: AppColors.accent,
           borderRadius: BorderRadius.circular(15),
         ),
-        child: Center(
+        child: const Center(
           child: Icon(
             Icons.book_rounded,
             color: Colors.black54,
@@ -27,7 +30,7 @@ class DeckListTile extends StatelessWidget {
         ),
       ),
       title: Text(
-        'Lei 8.112/90',
+        summary.deck.title,
         style: const TextStyle(
           fontSize: 16,
           color: Colors.white,
@@ -38,25 +41,25 @@ class DeckListTile extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-          'VUNESP · Direito Administrativo',
+          '${summary.deck.examBoard} · ${summary.deck.subject}',
           style: const TextStyle(
               fontSize: 10,
               color: AppColors.textSecondary,
             ),
           ),
-          SizedBox(height: 8,),
+          const SizedBox(height: 8,),
           Row(
             children: [
               Text(
-                '62 cards',
-                style: TextStyle(
+                '${summary.totalCards} cards',
+                style: const TextStyle(
                   color: AppColors.accent,
                   fontSize: 10,
                 ),
               ),
-              SizedBox(width: 8,),
+              const SizedBox(width: 8,),
               AppTag(
-                text: '18 pendentes',
+                text: '${summary.pendingCards} pendentes',
                 fontSize: 10,
                 backgroundColor: AppColors.accent,
               ),
