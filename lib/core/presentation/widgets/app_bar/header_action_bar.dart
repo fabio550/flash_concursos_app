@@ -15,7 +15,6 @@ class HeaderActionBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 100,
-      height: 40,
       decoration: BoxDecoration(
         color: AppColors.accent ,
         borderRadius: BorderRadius.circular(20),

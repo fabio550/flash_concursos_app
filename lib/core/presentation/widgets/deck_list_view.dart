@@ -1,4 +1,5 @@
 import 'package:flash_concursos_app/core/presentation/widgets/deck_list_tile.dart';
+import 'package:flash_concursos_app/core/system_design/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class DeckListView extends StatelessWidget {
@@ -15,7 +16,7 @@ class DeckListView extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 20),
           child: Card(
             clipBehavior: Clip.antiAlias,
-            color: const Color(0xFF1C1C1F),
+            color: AppColors.surface,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(16),
             ),
