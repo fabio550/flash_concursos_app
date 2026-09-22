@@ -37,7 +37,7 @@ class StatCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           upText != null ? Text(
-            'upText',
+            upText!,
             style: TextStyle(
               fontSize: 12,
               color: AppColors.textSecondary,
