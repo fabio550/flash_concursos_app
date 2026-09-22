@@ -89,6 +89,22 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                 ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 6),
+                      child: Text(
+                        'Continue estudando',
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: AppColors.textSecondary,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
                 DeckListView(summaries: data.decks),
               ],
             ),
