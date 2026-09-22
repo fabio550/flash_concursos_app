@@ -1,3 +1,4 @@
+import 'package:flash_concursos_app/core/system_design/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class GreetingHeader extends StatelessWidget {
@@ -10,14 +11,14 @@ class GreetingHeader extends StatelessWidget {
       children: [
         Text(
           'Quinta-feira, 17 set',
-          style: TextStyle(fontSize: 12, color: Colors.white54),
+          style: TextStyle(fontSize: 12, color: AppColors.textSecondary),
         ),
         SizedBox(height: 2),
         Text(
           'Bom dia, Fulano',
           style: TextStyle(
             fontSize: 20,
-            color: Colors.white70,
+            color: AppColors.textPrimary,
             fontWeight: FontWeight.bold,
           ),
         ),
