@@ -20,7 +20,7 @@ class TodayReviewHero extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Padding(
-        padding: EdgeInsets.symmetric(
+        padding: const EdgeInsets.symmetric(
           horizontal: 20,
           vertical: 12,
         ),
@@ -42,7 +42,7 @@ class TodayReviewHero extends StatelessWidget {
                   ),
                   //-----------------------------------------------
                   Padding(
-                    padding: EdgeInsetsGeometry.symmetric(
+                    padding: const EdgeInsets.symmetric(
                       horizontal: 20,
                       vertical: 0,
                     ),
@@ -107,7 +107,7 @@ class TodayReviewHero extends StatelessWidget {
               ),
               //-----------------------------------------------
               Padding(
-                padding: EdgeInsetsGeometry.symmetric(horizontal: 26, vertical: 32),
+                padding: const EdgeInsets.symmetric(horizontal: 26, vertical: 32),
                 child: ElevatedButton(
                   style: context.buttons.secondary,
                   onPressed: onPressed,

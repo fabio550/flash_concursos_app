@@ -5,7 +5,7 @@ class AppTag extends StatelessWidget {
   final String text;
   final Color? backgroundColor;
   final Color? textColor;
-  final EdgeInsetsGeometry? padding;
+  final EdgeInsets? padding;
   final double? fontSize;
 
   const AppTag({

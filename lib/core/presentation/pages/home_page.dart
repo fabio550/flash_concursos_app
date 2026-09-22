@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
               onPressed: () {},
             ),
             Padding(
-              padding: EdgeInsetsGeometry.symmetric(horizontal: 20, vertical: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
               child: Row(
                 children: [
                   Expanded(

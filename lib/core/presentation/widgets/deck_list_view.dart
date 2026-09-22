@@ -12,7 +12,7 @@ class DeckListView extends StatelessWidget {
       itemCount: 3,
       itemBuilder: (context, index) {
         return Padding(
-          padding: EdgeInsetsGeometry.symmetric(horizontal: 20),
+          padding: EdgeInsets.symmetric(horizontal: 20),
           child: Card(
             clipBehavior: Clip.antiAlias,
             color: const Color(0xFF1C1C1F),
